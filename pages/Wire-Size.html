@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wire Size Calculator (IEC)</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/wire-size.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Wire Size Calculator (IEC)</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <form id="wireForm">
+      <label>Load Current (A)</label>
+      <input type="number" id="loadCurrent" required>
+
+      <label>Nominal Voltage (V)</label>
+      <input type="number" id="nominalVoltage" required>
+
+      <label>Power Factor (0–1)</label>
+      <input type="number" step="0.01" id="powerFactor" value="0.9" required>
+
+      <label>Conductor Material</label>
+      <select id="material">
+        <option value="Copper">Copper</option>
+        <option value="Aluminium">Aluminium</option>
+      </select>
+
+      <label>Insulation Type</label>
+      <select id="insulation">
+        <option value="PVC">PVC (70°C)</option>
+        <option value="XLPE">XLPE (90°C)</option>
+      </select>
+
+      <label>Loaded Conductors</label>
+      <select id="conductors">
+        <option value="2">2 (Single-Phase)</option>
+        <option value="3">3 (Three-Phase)</option>
+      </select>
+
+      <label>Installation Method</label>
+      <select id="method">
+        <option value="A1">A1</option>
+        <option value="C">C</option>
+        <option value="E">E</option>
+      </select>
+
+      <label>Ambient Temperature (°C)</label>
+      <input type="number" id="ambientTemperature" value="30">
+
+      <label>Grouped Cables</label>
+      <input type="number" id="groupedCables" value="1">
+
+      <label>Cable Length (m)</label>
+      <input type="number" id="cableLength" value="10">
+
+      <label>Max Voltage Drop (%)</label>
+      <input type="number" id="maxVD" value="3">
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div id="result"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 Md. Efatuzzaman Efat | Contact: efatuzzaman@gmail.com</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AC Size Calculator (Bangladesh)</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/ac-size.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>AC Size Calculator (Bangladesh)</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="wire-size.html">Wire Size</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <form id="acForm">
+      <label>Room Area (sq ft)</label>
+      <input type="number" id="roomArea" required>
+
+      <label>Ceiling Height (ft)</label>
+      <input type="number" id="ceilingHeight" value="10">
+
+      <label>Number of Occupants</label>
+      <input type="number" id="occupants" value="2">
+
+      <label>Window Area (sq ft)</label>
+      <input type="number" id="windowArea" value="20">
+
+      <label>Wall Type</label>
+      <select id="wallType">
+        <option value="brick">Brick Wall</option>
+        <option value="concrete">Concrete</option>
+        <option value="insulated">Insulated Wall</option>
+      </select>
+
+      <label>Exposed Walls</label>
+      <input type="number" id="exposedWalls" value="2">
+
+      <label>Shading</label>
+      <select id="shading">
+        <option value="none">None</option>
+        <option value="light">Light Shading</option>
+        <option value="heavy">Heavy Shading</option>
+      </select>
+
+      <label>Floor Level</label>
+      <select id="floorLevel">
+        <option value="ground">Ground</option>
+        <option value="middle">Middle</option>
+        <option value="top">Top</option>
+      </select>
+
+      <label>Outdoor Temperature (°C)</label>
+      <input type="number" id="outdoorTemp" value="35">
+
+      <label>Indoor Temperature (°C)</label>
+      <input type="number" id="indoorTemp" value="24">
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div id="acResult"></div>
+
+    <p style="margin-top:1rem; color:#b00; font-weight:bold;">
+      ⚠️ Note: This is a simplified calculator for educational purposes. Always consult a professional for exact AC sizing.
+    </p>
+  </main>
+
+  <footer>
+    <p>© 2025 Md. Efatuzzaman Efat | Contact: efatuzzaman@gmail.com</p>
+  </footer>
+</body>
+</html>
