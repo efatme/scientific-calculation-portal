@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pipe Flow Calculator</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/pipe-flow.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Pipe Flow Calculator</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="ac-size.html">AC Size</a>
+      <a href="3d-printing.html">3D Printing</a>
+      <a href="wire-size.html">Wire Size</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <form id="pipeForm">
+      <label>Pipe Diameter (m)</label>
+      <input type="number" step="0.001" id="diameter" value="0.05" required>
+
+      <label>Pipe Length (m)</label>
+      <input type="number" id="length" value="10" required>
+
+      <label>Flow Rate (L/s)</label>
+      <input type="number" step="0.1" id="flowRate" value="2" required>
+
+      <label>Fluid Density (kg/m³)</label>
+      <input type="number" id="density" value="1000" required>
+
+      <label>Fluid Viscosity (Pa·s)</label>
+      <input type="number" step="0.000001" id="viscosity" value="0.001" required>
+
+      <label>Pipe Roughness (m)</label>
+      <input type="number" step="0.00001" id="roughness" value="0.0001">
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div id="pipeResult"></div>
+
+    <p style="margin-top:1rem; color:#b00; font-weight:bold;">
+      ⚠️ Disclaimer: This calculator uses simplified formulas for educational purposes. For engineering projects, always follow ASME/ISO standards.
+    </p>
+  </main>
+
+  <footer>
+    <p>© 2025 Md. Efatuzzaman Efat | Contact: efatuzzaman@gmail.com</p>
+  </footer>
+</body>
+</html>

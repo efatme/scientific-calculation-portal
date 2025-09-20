@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Printing Property Estimator</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/3d-printing.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>3D Printing Property Estimator</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="ac-size.html">AC Size</a>
+      <a href="wire-size.html">Wire Size</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <form id="printForm">
+      <label>Material</label>
+      <select id="material">
+        <option value="PLA">PLA</option>
+        <option value="ABS">ABS</option>
+        <option value="PETG">PETG</option>
+        <option value="Nylon">Nylon</option>
+      </select>
+
+      <label>Infill Density (%)</label>
+      <input type="number" id="infill" min="0" max="100" value="50">
+
+      <label>Layer Height (mm)</label>
+      <input type="number" id="layerHeight" step="0.05" value="0.2">
+
+      <label>Orientation</label>
+      <select id="orientation">
+        <option value="XY">XY (Flat)</option>
+        <option value="Z">Z (Vertical)</option>
+      </select>
+
+      <label>Annealed?</label>
+      <select id="annealed">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
+
+      <button type="submit">Calculate Properties</button>
+    </form>
+
+    <div id="printResult"></div>
+
+    <button id="downloadBtn" style="display:none;">Download CSV Report</button>
+
+    <p style="margin-top:1rem; color:#b00; font-weight:bold;">
+      ⚠️ Disclaimer: This tool is for educational purposes. Actual 3D print properties vary depending on printer, material batch, and settings.
+    </p>
+  </main>
+
+  <footer>
+    <p>© 2025 Md. Efatuzzaman Efat | Contact: efatuzzaman@gmail.com</p>
+  </footer>
+</body>
+</html>
